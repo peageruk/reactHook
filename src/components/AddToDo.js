@@ -6,6 +6,7 @@ const AddToDo = (props) => {
     <div>
       <label>Name </label>
       <input
+        className="input-todo"
         value={todo}
         type="text"
         onChange={(event) => {
@@ -17,7 +18,7 @@ const AddToDo = (props) => {
           handleOnClickBtn();
         }}
       >
-        add
+        Add to do
       </button>
     </div>
   );

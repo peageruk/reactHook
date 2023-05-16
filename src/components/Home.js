@@ -30,7 +30,6 @@ const Home = () => {
         setToDo={setToDo}
         handleOnClickBtn={handleOnClickBtn}
       />
-
       <DisplayToDo listToDo={listToDo} onClickDelete={onClickDelete} />
     </div>
   );
