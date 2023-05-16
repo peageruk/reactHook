@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import _ from "lodash";
-const TodoList = () => {
+import AddToDo from "./AddToDo";
+import DisplayToDo from "./DisplayToDo";
+const Home = () => {
   const [todo, setToDo] = useState("");
   const [listToDo, setToDoList] = useState([
     { id: "todo1", todo: "test" },
@@ -23,36 +25,15 @@ const TodoList = () => {
   };
   return (
     <div>
-      <label>Name </label>
-      <input
-        value={todo}
-        type="text"
-        onChange={(event) => {
-          setToDo(event.target.value);
-        }}
+      <AddToDo
+        todo={todo}
+        setToDo={setToDo}
+        handleOnClickBtn={handleOnClickBtn}
       />
-      <button
-        onClick={() => {
-          handleOnClickBtn();
-        }}
-      >
-        add
-      </button>
-      <div>list to do:</div>
-      {listToDo.map((item) => {
-        return (
-          <div
-            key={item.id}
-            onClick={() => {
-              onClickDelete(item.id);
-            }}
-          >
-            {item.todo}
-          </div>
-        );
-      })}
+
+      <DisplayToDo listToDo={listToDo} onClickDelete={onClickDelete} />
     </div>
   );
 };
 
-export default TodoList;
+export default Home;
