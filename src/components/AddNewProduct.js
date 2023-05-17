@@ -2,8 +2,8 @@ import React, { useState } from "react";
 
 const AddNewProduct = () => {
   const [name, setName] = useState("");
-  const [price, setPrice] = useState(0);
-  const [size, setSize] = useState(0);
+  const [price, setPrice] = useState("");
+  const [size, setSize] = useState("");
   const [color, setColor] = useState("");
   const handleOnClickBtn = () => {
     let object = {
@@ -12,7 +12,23 @@ const AddNewProduct = () => {
       size,
       color,
     };
-    console.log(">>>check input", object);
+    // localStorage.setItem("productList", JSON.stringify(object));
+    if (!name || !price || !size || !color) {
+      alert("All fields are required");
+      return;
+    }
+    let productList = localStorage.getItem("productList"); //string
+    if (productList) {
+      let arr = JSON.parse(productList); // object
+      arr.push(object);
+      localStorage.setItem("productList", JSON.stringify(arr));
+    } else {
+      localStorage.setItem("productList", JSON.stringify([object]));
+    }
+    setName("");
+    setPrice("");
+    setSize("");
+    setColor("");
   };
   const [isShow, setItShow] = useState("true");
   return (
@@ -89,6 +105,10 @@ const AddNewProduct = () => {
           Show form
         </div>
       )}
+      <div>
+        List product
+        <div>{localStorage.getItem("productList")}</div>
+      </div>
     </div>
   );
 };
