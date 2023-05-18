@@ -1,80 +1,59 @@
 .App {
-    background-color: #282c34;
-    padding: 40px;
-    height: calc(100vh - 80px);
-    display: flex;
-    font-size: 14px;
-    .content-left{
-        width: 50%;
-        padding: 10px;
-        /* border-right: solid 2px gray; */
-      }
-      .content-right{
-        width: 50%;
-        padding: 10px;
-        /* border: solid 1px gray; */
-        color: white; 
-      
-      }
-    }
-  
-  .App-logo {
-    height: 5vmin;
-    pointer-events: none;
+  /* text-align: center; */
+  padding         : 40px;
+  font-size       : 14px;
+  background-color: #282c34;
+  height          : calc(100vh - 80px);
+  display         : flex;
+
+
+  .content-left {
+      width  : 50%;
+      width  : 20%;
+      padding: 10px;
   }
-  
-  @media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-      animation: App-logo-spin infinite 20s linear;
-    text-align: center;
-  
-    }
+
+  .content-right {
+      width  : 50%;
+      width  : 80%;
+      padding: 10px;
+      color  : white;
   }
-  
-  .App-header {
-    display: flex;
-    flex-direction: column;
-    /* align-items: center;
-    justify-content: center; */
-    font-size: calc(10px + 2vmin);
-    color: white;
+
+  /* justify-content    : center; */
+  font-size: calc(10px + 2vmin);
+  color    : white;
+
+  span {
+      color    : red;
+      font-size: 18px;
   }
-  
-  .App-link {
-    color: #61dafb;
-  }
-  
-  @keyframes App-logo-spin {
-    from {
+}
+
+.App-link {
+  color: #61dafb;
+}
+@keyframes App-logo-spin {
+  from {
       transform: rotate(0deg);
-    }
-    to {
+  }
+  to {
       transform: rotate(360deg);
-    }
   }
-  
-  
-  
-  .input-product{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 10px;
-    input{
-        width: 60%;
-        height: 25px;
-        outline: none;
-        border-radius: 3px;
-        border: none;
-      }}
-  .input-todo{
-    width: 60%;
-    height: 25px;
-    outline: none;
-    border-radius: 3px;
-    border: none;
-  }
-  
-  button {
-    cursor: pointer;
-  }
+}
+.input-product {
+  display       : flex;
+  flex-direction: column;
+  gap           : 5px;
+  margin-bottom : 10px;
+}
+.input-product input {
+  width        : 60%;
+  height       : 24px;
+  outline      : none;
+  border-radius: 3px;
+  border       : none;
+}
+button {
+  cursor: pointer;
+}
