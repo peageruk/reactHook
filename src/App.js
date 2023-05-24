@@ -6,7 +6,8 @@ import Product from "./components/products/Product";
 import Nav from "./components/navigation/Nav";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Weather from "./components/weather/Weather";
-import WeatherC from "./components/weather/WeatherC";
+import OTP from "./components/OTP/OTP";
+import WeatherByLocation from "./components/weather/WeatherByLocation";
 
 function App() {
   return (
@@ -37,11 +38,19 @@ function App() {
         <Route path="/product">
           <Product />
         </Route>
-        <Route path="/weather">
+        <Route path="/weather" exact>
           <Weather />
+        </Route>
+        <Route path="/otp">
+          <OTP />
         </Route>
         <Route path="/about">
           <div>I'm Duc Anh</div>
+        </Route>
+        <Route path="/weather/detail/:name-:lon-:lat">
+          <div>
+            <WeatherByLocation />
+          </div>
         </Route>
         <Route path="*">
           <div>404 not found</div>

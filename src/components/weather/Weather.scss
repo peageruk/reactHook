@@ -1,0 +1,36 @@
+.weather-app-container{
+
+
+    .search-weather-container{
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        padding-top: 15px;
+        height: 30px;
+        input{
+            width: 300px;
+            padding: 0 5px;
+        }
+        
+    }
+    .result-container{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        // border: 1px solid gray;
+        .result{
+            display: flex;
+            gap: 15px;
+            // justify-content: center;
+            // padding: 5px;
+            margin-left: 250px;
+            // margin-right: auto;
+        }
+    }
+}
+.weather-forecast{
+    display: flex;
+        flex-direction: column;
+        gap: 15px;
+        border: 1px solid gray;
+}
