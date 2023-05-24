@@ -1,10 +1,10 @@
 import React from "react";
 import "./Nav.scss";
 
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 const Nav = () => {
   return (
-    <div class="topnav">
+    <div className="topnav">
       <NavLink to="/" exact={true}>
         Home
       </NavLink>

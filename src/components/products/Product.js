@@ -8,7 +8,7 @@ import iphone4 from "../../assets/images/iphone4.jpg";
 // import "react-image-lightbox-universal/dist/umd/bundle.min.css";
 
 const Product = () => {
-  const images = [iphone1, iphone2, iphone3, iphone4];
+  // const images = [iphone1, iphone2, iphone3, iphone4];
   const [currentUpperImage, setCurrentUpperImage] = useState(iphone1);
   //   const [isOpen, setIsOpen] = useState(false);
   //   const [index, setIndex] = useState(0);
@@ -68,7 +68,7 @@ const Product = () => {
           <div className="size">Deep Purple</div>
           <div className="action">
             <label className="quantity">Số lượng</label>
-            <input type="number" min={1} value={1} />
+            <input type="number" min={1} defaultValue={1} />
             <button className="buy">Chọn mua</button>
           </div>
         </div>
