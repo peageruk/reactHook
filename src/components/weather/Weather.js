@@ -20,6 +20,7 @@ const Weather = () => {
     // console.log("run useEffect");
     fetchCurrentWeather();
   }, []);
+
   useEffect(() => {
     async function fetchWeatherForecast() {
       try {
@@ -35,7 +36,9 @@ const Weather = () => {
     // console.log("run useEffect");
     fetchWeatherForecast();
   }, []);
+
   console.log("run render");
+
   return (
     <div>
       location: {weatherService} / {weatherForecast}
